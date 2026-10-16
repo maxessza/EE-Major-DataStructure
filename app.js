@@ -106,7 +106,7 @@
       return '<button class="topic-card" data-topic="' + esc(topic.id) + '" aria-label="เริ่มฝึก ' + esc(topic.title) + '">' +
         '<span><span class="topic-card-top"><span class="topic-icon">' + esc(topic.icon) + '</span><span class="topic-count">40 QUESTIONS</span></span>' +
         '<h3>' + esc(topic.title) + '</h3><p>' + esc(topic.description) + '</p></span>' +
-        '<span class="topic-card-bottom"><span class="topic-difficulty">กลาง · ท้าทาย</span><span class="topic-start">ฝึกหมวดนี้ <span>↗</span></span></span></button>';
+        '<span class="topic-card-bottom"><span class="topic-difficulty">Medium · Challenging</span><span class="topic-start">Practice this topic <span>↗</span></span></span></button>';
     }).join('');
 
     root.innerHTML =
@@ -213,7 +213,7 @@
     }).join('');
     var answered = Object.keys(state.answers).filter(function (key) { return state.answers[key] !== ''; }).length;
     var code = q.code ? '<div class="code-panel"><pre>' + codeMarkup(q.code) + '</pre></div>' : '';
-    var difficultyClass = q.difficulty === 'ท้าทาย' ? ' level-hard' : '';
+    var difficultyClass = q.difficulty === 'Challenging' ? ' level-hard' : '';
 
     root.innerHTML = '<div class="page-wrap session-view">' +
       '<div class="session-top"><button type="button" class="back-button" data-action="home">← กลับหน้าหลัก</button>' +
